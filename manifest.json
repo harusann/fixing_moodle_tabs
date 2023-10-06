@@ -1,0 +1,14 @@
+{
+    "name": "Fixing Moodle Tabs",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Moodleの学期タブを固定します。",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "options_page": "./option/options.html",
+    "content_scripts": [{
+        "matches": ["https://*.mc2.osakac.ac.jp/*/course/index.php?categoryid=*"],
+        "js": [
+            "content.js"
+        ]
+    }]
+}
